@@ -87,7 +87,7 @@ class stack_pool {
   /**
    * @brief Construct a new stack pool object
    */
-  stack_pool() : free_nodes{end()} {}
+  stack_pool() noexcept : free_nodes{end()} {}
 
   /**
    * @brief Construct a new stack pool object and reserve n node in the pool
