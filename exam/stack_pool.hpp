@@ -238,9 +238,6 @@ class stack_pool {
    * @return stack_type
    */
   stack_type pop(stack_type x) noexcept {
-    if (empty(x)) {
-      return end();
-    }
     auto tmp = next(x);
     next(x) = free_nodes;
     free_nodes = x;
