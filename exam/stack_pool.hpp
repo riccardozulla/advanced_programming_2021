@@ -12,7 +12,7 @@ class _iterator {
   using value_type = T;
   using reference = value_type&;
   using pointer = value_type*;
-  using difference_type = std::ptrdiff_t;
+  using difference_type = N;
   using iterator_category = std::forward_iterator_tag;
 
   explicit _iterator(stack_pool* p, N x) : pool{p}, current{x} {}
