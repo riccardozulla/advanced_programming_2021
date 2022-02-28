@@ -251,10 +251,16 @@ class stack_pool {
    * @return stack_type
    */
   stack_type free_stack(stack_type x) noexcept {
-    while (!empty(x)) {
-      x = pop(x);
+    auto tmp = x;
+    if(empty(next(x))) { return end(); }
+    while(!empty(next(x))){
+      x = next(x);
     }
-    return x;
+
+    next(x) = free_nodes;
+    free_nodes = tmp;
+
+    return end();
   }
 };
 
