@@ -105,39 +105,39 @@ class stack_pool {
    * @param x Head of the stack
    * @return iterator
    */
-  iterator begin(stack_type x) { return iterator(this, x); }
+  iterator begin(stack_type x) noexcept { return iterator(this, x); }
   /**
    * @brief Return an iterator to the end
    *
    * @return iterator
    */
-  iterator end(stack_type) { return iterator(this, end()); }
+  iterator end(stack_type) noexcept { return iterator(this, end()); }
   /**
    * @brief Return a const iterator to the beginning
    *
    * @param x Head of the stack
    * @return const_iterator
    */
-  const_iterator begin(stack_type x) const { return const_iterator(this, x); }
+  const_iterator begin(stack_type x) const noexcept { return const_iterator(this, x); }
   /**
    * @brief Return a const iterator to the end
    *
    * @return const_iterator
    */
-  const_iterator end(stack_type) const { return const_iterator(this, end()); }
+  const_iterator end(stack_type) const noexcept { return const_iterator(this, end()); }
   /**
    * @brief Return a const iterator to the beginning
    *
    * @param x Head of the stack
    * @return const_iterator
    */
-  const_iterator cbegin(stack_type x) const { return const_iterator(this, x); }
+  const_iterator cbegin(stack_type x) const noexcept { return const_iterator(this, x); }
   /**
    * @brief Return a const iterator to the end
    *
    * @return const_iterator
    */
-  const_iterator cend(stack_type) const { return const_iterator(this, end()); }
+  const_iterator cend(stack_type) const noexcept { return const_iterator(this, end()); }
 
   /**
    * @brief Return an empty stack
